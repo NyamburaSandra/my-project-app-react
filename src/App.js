@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import AboutUs from './components/AboutUs';
 import Home from './components/Home';
 import MyProjects from './components/MyProjects';
+import Login from './components/User/LogIn';
 import './App.css';
 
 function App() {
@@ -14,11 +15,12 @@ function App() {
   const [allProjects, setAllProjects] = useState([])
 
   useEffect(() => {
-    fetch(`/users/${user.id}`)
-    .then(res => res.json())
-    .then(data => setMyProjects(data.projects))
-  setMyProjects()
-  },[user.id])
+    if (user) {
+	    fetch(`/users/${user.id}`)
+	    .then(res => res.json())
+	    .then(data => setMyProjects(data.projects))
+    }
+  },[user])
 
   useEffect(() => {
     fetch(`/projects`)
@@ -28,10 +30,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar setUser={setUser} />
+      <NavBar setUser={setUser} user={user} />
       <Routes >
         <Route exact path="/" element={<Home allProjects={allProjects} user={user} setUser={setUser} />} />
-        <Route exact path="/myprojects" element={<MyProjects myProjects={myProjects} />} />
+        <Route exact path="/myprojects"  element={user ? <MyProjects myProjects={myProjects} /> : <Login setUser={setUser} />} />
       </Routes>
       <AboutUs />
     </BrowserRouter>

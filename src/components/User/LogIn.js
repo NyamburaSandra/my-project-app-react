@@ -9,9 +9,7 @@ function Login({ setUser }) {
     return (
         <div className="container">
             <div className="header">
-                <h1>LOG IN</h1>
-                <br/>
-                <br/>
+                <h1>MY PROJECT APP</h1>
             </div>
             <div>
                 <div>

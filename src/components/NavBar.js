@@ -1,11 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function NavBar({ setUser }) {
+function NavBar({ setUser, user }) {
     function handleLogout() {
         fetch("/logout", {
           method: "DELETE",
-        }).then(() => setUser());
+        }).then(setUser(null));
     }
 
     return (
@@ -20,9 +20,16 @@ function NavBar({ setUser }) {
                     My Projects
                 </div>
             </NavLink>
-            <header>
-                <button onClick={handleLogout}>Logout</button>
-            </header>
+            {user ? (
+                    <header>
+                        <button onClick={handleLogout}>Logout</button>
+                    </header>
+                    ) : (
+                    <div>
+                        
+                    </div>
+                    )}
+            
         </React.Fragment>
     )
 }

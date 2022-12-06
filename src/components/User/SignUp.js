@@ -65,7 +65,7 @@ function SignUp({ setUser, setMember }) {
             />
             </div><br/>
             <div>
-            <button type="submit">Submit</button>
+            <button type="submit">Sign Up</button>
             </div>
             </form>
             <button type="click" className="btn btn-secondary" onClick={signIn}>

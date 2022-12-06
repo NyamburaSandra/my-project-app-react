@@ -9,7 +9,7 @@ function Home({ allProjects, user, setUser }) {
             response.json().then(setUser);
           }
         });
-    }, [setUser]);
+    }, []);
     
     if (user) {
         return (
@@ -18,14 +18,15 @@ function Home({ allProjects, user, setUser }) {
                 {allProjects.map(project => {
                     return (
                         <div>
-                            {project.name}
+                            <h2>{project.name}</h2>
+                            <p>{project.description}</p>
                         </div>
                     )
                 })}
             </React.Fragment>
         )
     } else {
-        return <Login onLogin={setUser} />;
+        return <Login setUser={setUser} />;
     }
 }
 
