@@ -10,36 +10,7 @@ function NavBar({ setUser, user }) {
     }
 
     return (
-        /*<React.Fragment>
-            <NavLink to="/"  activeStyle>
-                <h1>Logo</h1>
-                <div>
-                    Home
-                </div>
-            </NavLink>
-            <NavLink to="/myprojects" activeStyle >
-                <div>
-                    My Projects
-                </div>
-            <NavLink>
-                <div>
-                  <AboutUs/>
-                </div>
-            </NavLink>
-            </NavLink >
-            {user ? (
-                    <header>
-                        <button onClick={handleLogout}>Logout</button>
-                    </header>
-                    ) : (
-                    <div>
-                        
-                    </div>
-                    )}
-            
-            
-        </React.Fragment>
-    )*/
+      
         <React.Fragment>
     <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
