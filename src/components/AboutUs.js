@@ -5,7 +5,7 @@ function AboutUs() {
         <div>
             <div>
                 <h2>About Us</h2>
-                <p>Welcome to My Projects App</p>
+                <p>Our mission is to help you find the best projects to work on.</p>
             </div>
             <div>
                 <h3>Contact Us</h3>

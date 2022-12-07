@@ -5,7 +5,12 @@ import AboutUs from './components/AboutUs';
 import Home from './components/Home';
 import MyProjects from './components/MyProjects';
 import Login from './components/User/LogIn';
+import { Button } from 'bootstrap';
 import './App.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+//import { Container, Row, Col } from 'react-bootstrap';
+import Footer from './components/footer';
+
 
 function App() {
 
@@ -34,8 +39,10 @@ function App() {
       <Routes >
         <Route exact path="/" element={<Home allProjects={allProjects} user={user} setUser={setUser} />} />
         <Route exact path="/myprojects"  element={user ? <MyProjects myProjects={myProjects} /> : <Login setUser={setUser} />} />
+        <Route exact path="/aboutus" element={<AboutUs />} />
       </Routes>
-      <AboutUs />
+      <Footer />
+      
     </BrowserRouter>
   );
 }

@@ -8,7 +8,15 @@ function MyProjects({ myProjects }) {
                 return (
                     <div>
                         <h2>{project.name}</h2>
-                        <p>{project.description}</p>
+                        <h5>{project.description}</h5>
+                        {project.comments.map(comment => {
+                            return (
+                                <div>
+                                    <p>{comment.opinion}</p>
+                                </div>
+                            )
+                        }
+                        )}  
                     </div>
                 )
             })}
