@@ -39,7 +39,7 @@ function Home({ allProjects, user, setUser }) {
                 <br/>
                 {allProjects.map(project => {
                     return (
-                        <div key={project.id} >
+                        <div key={project.id} className="card" class = "text-center justify-content-center text-decoration-none">
                             <h2>{project.name} by {project.user.username}</h2>
                             <img src={project.image_url} alt={project.name} width="250px" />
                             <h5>{project.description}</h5>
@@ -56,7 +56,8 @@ function Home({ allProjects, user, setUser }) {
                                 <div></div>
                             )}
                             <form onSubmit={handleComment} id={project.id} >
-                                <input type="text" id="comment" placeholder="Add comment!" value={opinion} onChange={(e) => setOpinion(e.target.value)} className="form-control form-control-lg" ></input>
+                                <input type="text" id="comment" placeholder="Add comment!" value={opinion} onChange={(e) => setOpinion(e.target.value)} className="form-control form-control-lg mb-4 text-center text-decoration-none text-dark bg-dark border border-light"
+                                ></input>
                                 <button type="submit" className="btn btn-primary btn-lg btn-block" >Submit</button>
                             </form>
                         </div>
