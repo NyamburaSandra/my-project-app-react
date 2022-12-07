@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
 
-function Login({ setUser }) {
+function Login({ setUser, user }) {
 
     const [member, setMember] = useState(false)
 
@@ -21,7 +21,7 @@ function Login({ setUser }) {
                     ) : (
                     <div>
                         <h2>Sign Up</h2>
-                        <SignUp setUser={setUser} setMember={setMember} />
+                        <SignUp setUser={setUser} user={user} setMember={setMember} />
                     </div>
                     )}
                 </div>
