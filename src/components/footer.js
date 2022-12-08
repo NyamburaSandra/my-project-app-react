@@ -13,7 +13,7 @@ function Footer() {
                 <a href="https://www.instagram.com/"><FaInstagram /></a>
             </div>
             <div className="footer__text">
-                <p>© 2020 - All rights reserved</p>
+                <p>© 2022 - All rights reserved</p>
             </div>
         </footer>
     )
