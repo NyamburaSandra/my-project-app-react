@@ -9,13 +9,13 @@ function Login({ setUser, user }) {
     return (
         <div className="container">
             <div className="header">
-                <h1>MY PROJECT APP</h1>
+                <h1 className ="d-flex justify-content-center">My Project App</h1>
             </div>
             <div>
                 <div>
                     {member ? (
                     <div>
-                        <h2>Sign In</h2>
+                        <h2 className="d-flex justify-content-center">Sign In</h2>
                         <SignIn setUser={setUser} setMember={setMember} />
                     </div>
                     ) : (
