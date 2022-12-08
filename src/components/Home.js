@@ -42,20 +42,20 @@ function Home({ allProjects, user, setUser }) {
                 {allProjects.map(project => {
                     return (
                         //dark outline
-                        <div class= "d-flex justify-content-center border - right - 0 mb-5 " >
-                        <div class="card-deck mb-3" style={{width: "30rem" }}>
-                            <img src={project.image_url} class="card-img-top" alt={project.name} width="250px" />
-                            <div class="card-body">
-                                <h3 class="card-title text-decoration-none text-center mb-4 ">{project.name} by {project.user.username}</h3>
-                                <p class="card-text text-decoration-none text-center"
+                        <div className= "d-flex justify-content-center border - right - 0 mb-5 " key={project.id} >
+                        <div className="card-deck mb-3" style={{width: "30rem" }}>
+                            <img src={project.image_url} className="card-img-top" alt={project.name} width="250px" />
+                            <div className="card-body">
+                                <h3 className="card-title text-decoration-none text-center mb-4 ">{project.name} by {project.user.username}</h3>
+                                <p className="card-text text-decoration-none text-center"
                                 >{project.description}</p>
 
                                 {project.comments ? (
                                     project.comments.map(comment => {
                                         return (
-                                            <ul key={comment.id} class =  "list-group list-group-flush">
+                                            <ul key={comment.id} className =  "list-group list-group-flush">
                                                 
-                                                <li class = "list-group-item">{comment.user.username} : {comment.opinion}</li>
+                                                <li className = "list-group-item">{comment.user.username} : {comment.opinion}</li>
                                             </ul>
                                         
                                         )
