@@ -2,17 +2,24 @@ import React from "react";
 
 function AboutUs() {
     return (
+
         <div>
-            <div>
-                <h2>About Us</h2>
-                <p>Our mission is to help you find the best projects to work on.</p>
-            </div>
-            <div>
-                <h3>Contact Us</h3>
-                <p>+254 743 924 723</p>
+            <div clasName="container" style={{ marginTop: "100px" }} class = "has-bg-img bg-purple bg-blend-multiply">
+                <div className="row justify-content-md-center">
+                    <div className="col-xs-6">
+                        <h1 className="text-center">About Us</h1>
+                        <img class = "" src = "https://images.unsplash.com/photo-1667229309264-131c64b7eab2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80" alt = "about us" />
+                        <p className="text-center fs-5" class = "z-index-1 postion-relative">
+                            We are a team of 5 students from Moringa School.
+                            We are very passionate about the tech industry and we setup this website to help other likeminded people to connect and share ideas.
+                            We are very excited to see what the future holds for us and we hope you will join us on this journey.
+
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default AboutUs;
