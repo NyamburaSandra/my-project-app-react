@@ -3,7 +3,7 @@ import React from "react";
 function AboutUs() {
     return (
 
-        <div>
+        /*<div>
             <div clasName="container" style={{ marginTop: "100px" }} class = "has-bg-img bg-purple bg-blend-multiply">
                 
                 <div className="row justify-content-md-center">
@@ -19,7 +19,22 @@ function AboutUs() {
                     </div>
                 </div>
             </div>
+        </div>*/
+
+        <div class="card" style={{width: "50rem", margin: "auto", marginTop: "100px"}}>
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1563906267088-b029e7101114?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Card image cap"/>
+                <div class="card-body">
+                    <p class="card-text text-center"
+                     style= {{textAlign: "center"}}>
+                            We are a team of 5 students from Moringa School.
+                            We are very passionate about the tech industry and we setup this website to help other likeminded people to connect and share ideas.
+                            We are very excited to see what the future holds for us and we hope you will join us on this journey.
+
+                    </p>
+                </div>
         </div>
+
+
     );
 }
 
