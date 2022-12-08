@@ -33,33 +33,46 @@ function Home({ allProjects, user, setUser }) {
     
     if (user) {
         return (
+
+
             <React.Fragment>
                 <h2 className="d-flex justify-content-center text-decoration-none">Welcome, {user.username}!</h2>
                 <br />
                 <br/>
                 {allProjects.map(project => {
                     return (
-                        <div key={project.id} className="card" class = "text-center justify-content-center text-decoration-none">
-                            <h2>{project.name} by {project.user.username}</h2>
-                            <img src={project.image_url} alt={project.name} width="250px" />
-                            <h5>{project.description}</h5>
-                            {project.comments ? (
-                                project.comments.map(comment => {
-                                    return (
-                                        <div key={comment.id} >
-                                            <p>{comment.user.username} : {comment.opinion}</p>
-                                        </div>
+                        //dark outline
+                        <div class= "d-flex justify-content-center border - right - 0 mb-5 " >
+                        <div class="card-deck mb-3" style={{width: "30rem" }}>
+                            <img src={project.image_url} class="card-img-top" alt={project.name} width="250px" />
+                            <div class="card-body">
+                                <h3 class="card-title text-decoration-none text-center mb-4 ">{project.name} by {project.user.username}</h3>
+                                <p class="card-text text-decoration-none text-center"
+                                >{project.description}</p>
+
+                                {project.comments ? (
+                                    project.comments.map(comment => {
+                                        return (
+                                            <ul key={comment.id} class =  "list-group list-group-flush">
+                                                
+                                                <li class = "list-group-item">{comment.user.username} : {comment.opinion}</li>
+                                            </ul>
+                                        
+                                        )
+                                    }
                                     )
-                                }
-                                )
-                            ) : (
-                                <div></div>
-                            )}
-                            <form onSubmit={handleComment} id={project.id} >
-                                <input type="text" id="comment" placeholder="Add comment!" value={opinion} onChange={(e) => setOpinion(e.target.value)} className="form-control form-control-lg mb-4 text-center text-decoration-none text-dark bg-dark border border-light"
-                                ></input>
-                                <button type="submit" className="btn btn-primary btn-lg btn-block" >Submit</button>
-                            </form>
+                                ) : (
+                                    <ul></ul>
+                                )}
+
+                                <form onSubmit={handleComment} id={project.id} className= "mx-1 mx-md-4"  >
+                                    <input type="text" id="comment" placeholder="Add comment!" value={opinion} onChange={(e) => setOpinion(e.target.value)} className="form-control form-control-lg mb-4 text-center text-decoration-none text-light bg-dark border border-light"
+                                    ></input>
+                                    <button type="submit" className="btn btn-primary btn-lg btn-block" >Submit</button>
+                                </form>
+
+                                </div>
+                            </div>
                         </div>
                     )
                 })}
