@@ -15,12 +15,11 @@ function Login({ setUser, user }) {
                 <div>
                     {member ? (
                     <div>
-                        <h2 className="d-flex justify-content-center">Sign In</h2>
+                        <h2 className=" justify-content-center">Sign Up</h2>
                         <SignIn setUser={setUser} setMember={setMember} />
                     </div>
                     ) : (
                     <div>
-                        <h2>Sign Up</h2>
                         <SignUp setUser={setUser} user={user} setMember={setMember} />
                     </div>
                     )}
