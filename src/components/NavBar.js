@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+//import { ReactComponent as Logo } from "./logo1.png";
 import AboutUs from "./AboutUs";
 
 function NavBar({ setUser, user }) {
@@ -14,7 +15,8 @@ function NavBar({ setUser, user }) {
         <React.Fragment>
     <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-            <NavLink className="navbar-brand" to="/">Logo</NavLink>
+            <NavLink className="navbar-brand" to="/">Logo
+            </NavLink>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
