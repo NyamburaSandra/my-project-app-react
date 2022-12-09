@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 //import { ReactComponent as Logo } from "./logo1.png";
 // import AboutUs from "./AboutUs";
+import { ReactComponent as Logo } from "./imac-note-svgrepo-com.svg"
 
 function NavBar({ setUser, user }) {
     function handleLogout() {
@@ -12,10 +13,11 @@ function NavBar({ setUser, user }) {
 
     return (
       
-        <React.Fragment>
+ <React.Fragment>
     <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-            <NavLink className="navbar-brand" to="/">Logo
+            <NavLink className="navbar-brand" to="/">
+                <Logo className="logo" /> 
             </NavLink>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
