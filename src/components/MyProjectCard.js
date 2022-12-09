@@ -40,9 +40,10 @@ function MyProjectCard({ project }) {
             <div className="card-body" style={{width: 300 + "px"}} >
                 <h2 className="card-title" >{project.name}</h2>
                 <div className="d-flex justify-content-center" >
-                    <img src={project.image_url} alt={project.name} width="250px" />
+                    <img  className="card-img-top card-img"
+                    src={project.image_url} alt={project.name} width="250px" />
                 </div>
-                <p className="card text " >{project.description}</p>
+                <p className="card text  mb-4 p-4 fs-6 text-center" >{project.description}</p>
                 <div>
                     {project.comments ? (
                         project.comments.map(comment => {
@@ -61,7 +62,7 @@ function MyProjectCard({ project }) {
                 </div>
             </div>
 
-            <button id={project.id} type="button" className="btn btn-primary btn-lg btn-block" onClick={handleSetEdit}>Edit</button>
+           
 
             {edit ? (
                 <div key={project.id}>
@@ -78,8 +79,9 @@ function MyProjectCard({ project }) {
                 <div></div>
             )}
             <br/>
-            <div className="d-flex flex-row-reverse" >
-            <button type="submit" className="btn btn-danger btn-lg btn-block" onClick={handleDelete} id={project.id} >Delete</button>
+            <div>
+            <button type="submit" className="btn btn-primary btn-lg btn-block mb-1 float-end" onClick={handleSetEdit} id={project.id} >Edit</button>
+            <button type="submit" className="btn btn-danger btn-lg btn-block mb-1 float-start" onClick={handleDelete} id={project.id} >Delete</button>
             </div>
 
         </div>

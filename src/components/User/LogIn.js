@@ -15,7 +15,7 @@ function Login({ setUser, user }) {
                 <div>
                     {member ? (
                     <div>
-                        <h2 className=" justify-content-center">Sign Up</h2>
+                        
                         <SignIn setUser={setUser} setMember={setMember} />
                     </div>
                     ) : (
