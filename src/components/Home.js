@@ -44,9 +44,10 @@ function Home({ allProjects, user, setUser }) {
                         //dark outline
                         <div className= "d-flex justify-content-center border - right - 0 mb-5 " key={project.id} >
                         <div className="card-deck mb-3" style={{width: "30rem" }}>
-                            <img src={project.image_url} className="card-img-top" alt={project.name} width="250px" />
+                            <img src={project.image_url} className="card-img-top card-img-rounded" alt={project.name} width="250px" />
                             <div className="card-body">
-                                <h3 className="card-title text-decoration-none text-center mb-4 ">{project.name} by {project.user.username}</h3>
+                                <h3 className="card-title text-decoration-none text-center mb-4 p-3 
+                                 ">{project.name} by {project.user.username}</h3>
                                 <p className="card-text text-decoration-none text-center"
                                 >{project.description}</p>
 

@@ -36,9 +36,10 @@ function MyProjectCard({ project }) {
 
     return (
         //space cards
-        <div className="card" >
-            <div className="card-body" style={{width: 300 + "px"}} >
-                <h2 className="card-title" >{project.name}</h2>
+        <div className="card mb-3" style={{ width: 300 + "px" }} >
+            <div className="card-body xs-2 mb-3" style={{width: 300 + "px"}} >
+                <h2 className="card-title text-decoration-none text-center mb-4
+                " >{project.name}</h2>
                 <div className="d-flex justify-content-center" >
                     <img  className="card-img-top card-img"
                     src={project.image_url} alt={project.name} width="250px" />
